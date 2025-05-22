@@ -23,10 +23,10 @@ CORE_TGZ="apache-tomcat-${TOMCAT_VERSION}.tar.gz"
 CORE_ASC="${CORE_TGZ}.asc"
 CORE_SHA="${CORE_TGZ}.sha512"
 
-#### 2) INSTALL JAVA 17+ WITH JDK (for Red Hat) ####
-echo "==> Installing Java 17 OpenJDK with development tools (includes 'jar')..."
+#### 2) INSTALL JAVA 21 WITH JDK (for Red Hat) ####
+echo "==> Installing Java 21 OpenJDK with development tools (includes 'jar')..."
 
-sudo dnf install -y java-17-openjdk-devel
+sudo yum install java-21-openjdk java-21-openjdk-devel
 
 # Auto-detect JAVA_HOME and export it
 export JAVA_HOME="$(dirname "$(dirname "$(readlink -f "$(which java)")")")"
